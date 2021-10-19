@@ -17,5 +17,14 @@ def prompt_add_contact():
     print(f"Adding {name} with {number}") #printing the input (python's f-string)
     contacts.add_contact(name,number)
 
+#function to get contact
+def prompt_get_contact():
+    name = input("Please enter the name to find: ")
+    number = contacts.get_contact(name)
+    if number:
+        print(f"{name}'s number is {number}")
+    else:
+        print(f"{name}'s number not found")
+
 #Executing code
 prompt_add_contact()
