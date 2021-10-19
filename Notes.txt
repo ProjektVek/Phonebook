@@ -4,3 +4,5 @@ https://docs.replit.com/hosting/database-faq
 
 Learning:
 "CRUD" - Create, Read, Update, Delete: Fundamental operations for replit database
+The database works similarly as a python dictionary
+The database stores key-value pairs
