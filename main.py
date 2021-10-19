@@ -6,5 +6,5 @@ print(db["Harris, Steve"]) #Retrieving key value in the database
 
 #Comparing with python dictionary
 dictionary = {} #defining dictionary
-d["Harris, Steve"] = "12345666"
-print(d["Harris, Steve"])
+dictionary["Harris, Steve"] = "12345666"
+print(dictionary["Harris, Steve"])
