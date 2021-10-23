@@ -2,6 +2,8 @@ Links:
 https://docs.replit.com/tutorials/11-using-the-replit-database
 https://docs.replit.com/hosting/database-faq
 
+db.prefix('') -> Will return all keys with the prefix(at the start of the word)
+
 Learning:
 "CRUD" - Create, Read, Update, Delete: Fundamental operations for replit database
 The database works similarly as a python dictionary
