@@ -64,7 +64,7 @@ def prompt_update_contact():
 
 #function to delete a contact
 def prompt_delete_contact():
-    name = input('Please enter the name to delete: ').strip
+    name = input('Please enter the name to delete: ').strip()
     contact = contacts.get_contact(name)
     if contact: #if isn't empty
         print(f'Deleting {name}')
