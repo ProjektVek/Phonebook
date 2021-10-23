@@ -52,15 +52,25 @@ def prompt_update_contact():
         new_name = input(f'Please enter the new name for this contact (leave blank to keep {old_name}):').strip()
         new_number = input(f'Please enter the new number for this contact (leave blank to keep {old_number}):').strip()
 
-        if not new_number:
+        if not new_number: #if new number is empty
             new_number = old_number
 
-        if not new_name:
-            contacts.update_number(old_number, new_number)
+        if not new_name: #if new name is empty
+            contacts.update_number(old_name, new_number)
         else:
             contacts.update_contact(old_name, new_name, new_number)
     else:
         print(f'It looks like {old_name} does not exist')
+
+#function to delete a contact
+def prompt_delete_contact():
+    name = input('Please enter the name to delete: ').strip
+    contact = contacts.get_contact(name)
+    if contact: #if isn't empty
+        print(f'Deleting {name}')
+        contacts.delete_contact(name)
+    else:
+        print(f'It looks like {name} does not exist')
 
 #Creating Menu
 main_message = 'Welcome to Phonebook\n'
@@ -68,7 +78,8 @@ main_message += '-----------------------------\n'
 main_message += 'Please choose:\n'
 main_message += '1 - Add a new Contact\n'
 main_message += '2 - Find a Contact\n'
-main_message += '3 - Find a Contact\n'
+main_message += '3 - Update a Contact\n'
+main_message += '4 - Delete a Contact\n'
 main_message += '-----------------------------\n'
 
 #Defining main function
@@ -81,6 +92,8 @@ def main():
         prompt_get_contact()
     elif choice == '3':
         prompt_update_contact()
+    elif choice == '4':
+        prompt_delete_contact()
     else:
         print("Invalid input. Please try again.")
 

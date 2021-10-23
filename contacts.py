@@ -27,3 +27,7 @@ def update_number(old_name, new_number):
 def update_contact(old_name, new_name, new_number):
     db[new_name] = new_number
     del db[old_name]
+
+#funcition to delete contact
+def delete_contact(name):
+    del db[name]
